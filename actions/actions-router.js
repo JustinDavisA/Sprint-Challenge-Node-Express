@@ -4,6 +4,17 @@ const Actions = require('../data/helpers/actionModel.js');
 
 const router = express.Router();
 
+router.get('/', async (req, res) => {
+    try {
+        const actions = await Actions.get()
+        res.status(200).json(actions)
+    } catch {
+        res.status(500).json({
+            message: 'Error retrieving actions'
+        })
+    }   
+})
+
 router.get('/:id', async (req, res) => {
     try {
        const action = await Actions.getById(req.params.id)
@@ -14,7 +25,6 @@ router.get('/:id', async (req, res) => {
                message: 'Action not found'
            })
        }
-       
     } catch (err) {
         console.log(err)
         res.status(500).json({
