@@ -26,13 +26,25 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+1.Routing - Handles how URLs respond to requests (handler functuions)
+
+2.Middleware - Functions that have access to req and res allowing but not requiring chnages
+
 - [ ] Describe Middleware?
+
+With access to the request and response function it can also act as the next funtion in the cycle
 
 - [ ] Describe a Resource?
 
+A resource is a group of data objects accessed by the client
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+Status codes like 404 (Not found) can be responded with for optimal feedback
+
 - [ ] How can we partition our application into sub-applications?
+
+Express routers allow us to divide up our code and not have all server requests in the same place
 
 ## Project Setup
 
