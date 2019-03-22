@@ -7,8 +7,7 @@ const projectsRouter = require('./actions/actions-router.js');
 const server = express();
 
 server.use(express.json());
-server.use(helmet())
-server.use(upperCaser)
+server.use(helmet());
 
 server.use('/api/actions', actionsRouter);
 server.use('/api/projects', projectsRouter);
