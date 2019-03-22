@@ -17,14 +17,14 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
     try {
-       const project = await Projects.getById(req.params.id)
-       if (project) {
-        res.status(200).json(project)
-       } else {
-           res.status(404).json({
-               message: 'Project not found'
-           })
-       }
+        const project = await Projects.getById(req.params.id)
+        if (project) {
+            res.status(200).json(project)
+        } else {
+            res.status(404).json({
+                message: 'Project not found'
+            })
+        }
     } catch (err) {
         console.log(err)
         res.status(500).json({

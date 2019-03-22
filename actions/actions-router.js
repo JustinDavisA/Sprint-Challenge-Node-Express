@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
     try {
-       const action = await Actions.getById(req.params.id)
+       const action = await Actions.get(req.params.id)
        if (action) {
         res.status(200).json(action)
        } else {
